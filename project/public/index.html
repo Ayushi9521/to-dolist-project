@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>To Do List!</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="task.css" type="text/css">
+	<script src="/__/firebase/8.2.9/firebase-app.js"></script>
+	<script src="/__/firebase/8.2.9/firebase-database.js"></script>
+	<script src="task.js"> </script>
+  </head>
+  <body onload="create_unfinished_task();">
+<!--navbar code-->
+<div id="content_container" class="container-fluid">
+	<div id="Task_header">
+    <nav class="navbar navbar-dark icon-bar ">
+	<a class="active" href="#"><i class="fa fa-home"></i></a>
+    <a   href="#">To Do List</a>
+    
+</nav>
+	
+<div ><h1> Welcome in your To Do List application!!!</h1>
+
+</div>
+</div>
+<!--form for taking task as a input-->
+<div class="card" id="task_input_container">
+  <div class="card-body">
+    <input type="text" id="input_number" placeholder="Enter a number"/>
+    <input type="text" id="input_box" placeholder="Enter a task"/>
+  <button type="button" id="input_button" class="btn btn-success" onclick="add_task();">Add task
+  <i class="fa fa-arrow-circle-right"></i></button>
+  </div>
+</div>
+<br/><br/>
+<p id="do"> Task to do </p>
+<div class="container">
+<div class="task_container"> 
+<div id="task_data">
+		<p id="task_number" contenteditable="false"> 1 </p>
+		<p id="task_title" contenteditable="false"> task title </p>
+</div>
+<div id="task_tool">
+<button id="task_edit_button" onclick="task_edit();">
+	<i class="fa fa-pencil"></i> Edit
+</button>
+<button id="task_delete_button" onclick="task_delete();">
+	<i class="fa fa-trash"></i> delete
+</button>
+</div>
+
+</div>
+<div class="task_container"> 
+<div id="task_data">
+		<p id="task_number" contenteditable="false"> 1 </p>
+		<p id="task_title" contenteditable="false"> task title </p>
+</div>
+<div id="task_tool">
+<button id="task_edit_button" onclick="task_edit();">
+	<i class="fa fa-pencil"></i> Edit
+</button>
+<button id="task_delete_button" onclick="task_delete();">
+	<i class="fa fa-trash"></i> delete
+</button>
+<br/>
+</div>
+
+</div>
+<div class="task_container"> 
+<div id="task_data">
+		<p id="task_number" contenteditable="false"> 1 </p>
+		<p id="task_title" contenteditable="false"> task title </p>
+</div>
+<div id="task_tool">
+<button id="task_edit_button" onclick="task_edit();">
+	<i class="fa fa-pencil"></i> Edit
+</button>
+<button id="task_delete_button" onclick="task_delete();">
+	<i class="fa fa-trash"></i> delete
+</button>
+</div>
+
+</div>
+
+
+</div>
+  </body>
+</html>
